@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
@@ -35,12 +36,17 @@ export function Header() {
     >
       <div className="container-cmpm flex h-16 items-center justify-between md:h-20">
         {/* 로고 */}
-        <Link href="/" className="flex items-baseline gap-2">
-          <span className="font-display text-xl font-bold tracking-tight text-brand-600 md:text-2xl">
-            {COMPANY.nameEn}
-          </span>
-          <span className="hidden text-xs text-ink-soft sm:inline">
-            {COMPANY.tagline}
+        <Link href="/" className="flex items-center gap-2.5">
+          <Image
+            src="/logo.png"
+            alt={`${COMPANY.nameEn} 로고`}
+            width={528}
+            height={104}
+            priority
+            className="h-9 w-auto md:h-12"
+          />
+          <span className="hidden font-display text-lg font-bold tracking-tight text-brand-700 sm:inline md:text-xl">
+            씨엠피엠건설
           </span>
         </Link>
 

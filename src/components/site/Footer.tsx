@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { NAV, COMPANY } from "@/lib/site";
 
 export function Footer() {
@@ -7,8 +8,17 @@ export function Footer() {
       <div className="container-cmpm grid gap-10 py-14 md:grid-cols-[1.4fr_1fr_1fr]">
         {/* 회사 */}
         <div>
-          <div className="font-display text-2xl font-bold tracking-tight text-white">
-            {COMPANY.nameEn}
+          <div className="flex items-center gap-2.5">
+            <Image
+              src="/logo-white.png"
+              alt={`${COMPANY.nameEn} 로고`}
+              width={528}
+              height={104}
+              className="h-7 w-auto"
+            />
+            <span className="font-display text-xl font-bold tracking-tight text-white">
+              씨엠피엠건설
+            </span>
           </div>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-brand-200">
             {COMPANY.tagline}. 차수·강관다단 그라우팅 공법과 20여 건의 특허로
