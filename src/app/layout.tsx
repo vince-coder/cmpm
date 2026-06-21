@@ -23,15 +23,29 @@ const pretendard = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${COMPANY.domain}`),
   title: {
-    default: `${COMPANY.nameEn} | ${COMPANY.tagline}`,
-    template: `%s | ${COMPANY.nameEn}`,
+    default: `${COMPANY.nameKo} ${COMPANY.nameEn} | ${COMPANY.tagline}`,
+    template: `%s | ${COMPANY.nameKo} ${COMPANY.nameEn}`,
   },
   description:
-    "차수 그라우팅·강관다단 그라우팅 특화, 보유 특허 20+건의 토목 전문기업 CMPM. 저수지·터널·교량·상하수도 시공 및 유지보수.",
+    "씨엠피엠건설(CMPM) — 차수 그라우팅·강관다단 그라우팅 특화, 보유 특허 20+건의 토목 전문기업. 저수지·터널·교량·상하수도 시공 및 유지보수. 광주광역시 소재.",
+  keywords: [
+    "씨엠피엠건설",
+    "씨엠피엠",
+    "CMPM",
+    "그라우팅",
+    "차수 그라우팅",
+    "강관다단 그라우팅",
+    "특허 토목기업",
+    "광주 토목",
+  ],
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "ko_KR",
-    siteName: COMPANY.nameEn,
+    siteName: `${COMPANY.nameKo} ${COMPANY.nameEn}`,
+    title: `${COMPANY.nameKo} ${COMPANY.nameEn} | ${COMPANY.tagline}`,
+    description:
+      "씨엠피엠건설(CMPM) — 차수·강관다단 그라우팅 특화, 보유 특허 20+건의 토목 전문기업.",
   },
 };
 

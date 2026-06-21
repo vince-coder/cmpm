@@ -3,6 +3,7 @@
 
 export const COMPANY = {
   name: "씨엠피엠",
+  nameKo: "씨엠피엠건설",
   nameEn: "CMPM",
   tagline: "그라우팅 특화 · 특허전문 토목기업",
   established: 2004,
