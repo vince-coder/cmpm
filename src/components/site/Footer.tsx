@@ -40,7 +40,7 @@ export function Footer() {
           <div className="flex flex-wrap items-baseline gap-x-5 gap-y-2">
             <h3 className="whitespace-nowrap font-semibold text-white">오시는 길</h3>
             <ul className="flex flex-wrap gap-x-4 gap-y-1 text-brand-200">
-              <li>{COMPANY.address}</li>
+              <li className="basis-full">{COMPANY.address}</li>
               <li>TEL. {COMPANY.tel}</li>
               <li>{COMPANY.email}</li>
             </ul>
