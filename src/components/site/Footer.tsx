@@ -21,8 +21,7 @@ export function Footer() {
             </span>
           </div>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-brand-200">
-            {COMPANY.tagline}. 차수·강관다단 그라우팅 공법과 20여 건의 특허로
-            지반의 안전을 책임집니다.
+            {COMPANY.tagline}
           </p>
         </div>
 
