@@ -10,7 +10,7 @@ export function PageHero({
   return (
     <section
       className="relative overflow-hidden rounded-md text-white"
-      style={{ backgroundColor: "#3f54cf" }}
+      style={{ backgroundColor: "#3a52e0" }}
     >
       <div className="relative px-6 py-20 sm:px-10 md:px-16 md:py-24">
         <p className="eyebrow text-white/70">{eyebrow}</p>
