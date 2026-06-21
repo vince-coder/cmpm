@@ -22,21 +22,11 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-brand-600/70 via-brand-600/40 to-brand-600/10" />
 
       <div className="relative z-10 flex min-h-[70vh] flex-col justify-center px-6 py-24 sm:px-10 md:min-h-[74vh] md:px-16 md:py-28">
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="inline-flex w-fit items-center gap-1.5 rounded-full bg-white/15 px-3 py-1.5 text-xs font-semibold text-white ring-1 ring-white/30 backdrop-blur-sm sm:text-sm"
-        >
-          <BadgeCheck size={16} className="text-brand-200" />
-          {VENTURE.badge} · {VENTURE.type}
-        </motion.div>
-
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.05 }}
-          className="eyebrow mt-4 text-brand-200"
+          transition={{ duration: 0.6 }}
+          className="eyebrow text-brand-200"
         >
           Grouting Specialist · 20+ Patents
         </motion.p>
@@ -65,10 +55,20 @@ export function Hero() {
         </motion.p>
 
         <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.35 }}
+          className="mt-8 inline-flex w-fit items-center gap-1.5 rounded-full bg-white/15 px-3 py-1.5 text-xs font-semibold text-white ring-1 ring-white/30 backdrop-blur-sm sm:text-sm"
+        >
+          <BadgeCheck size={16} className="text-brand-200" />
+          {VENTURE.badge} · {VENTURE.type}
+        </motion.div>
+
+        <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.4 }}
-          className="mt-9 flex flex-wrap gap-3"
+          transition={{ duration: 0.7, delay: 0.45 }}
+          className="mt-4 flex flex-wrap gap-3"
         >
           <Link
             href="/technology"
