@@ -34,15 +34,15 @@ export default function Home() {
           </Reveal>
           <div className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-line bg-line md:grid-cols-4">
             {GLANCE.map((g, i) => (
-              <Reveal key={g.label} i={i} className="bg-surface px-6 py-8 text-center">
+              <Reveal key={g.label} i={i} className="bg-surface px-3 py-7 text-center sm:px-6 sm:py-8">
                 <div
-                  className="font-display text-4xl font-extrabold md:text-5xl"
+                  className="font-display text-3xl font-extrabold sm:text-4xl md:text-5xl"
                   style={{ color: ACCENT_COLORS[i % ACCENT_COLORS.length] }}
                 >
                   <CountUp to={g.value} suffix={g.suffix} raw={g.raw} />
                 </div>
                 <div className="mt-2 text-sm font-semibold">{g.label}</div>
-                <div className="mt-1 text-xs text-ink-soft">{g.note}</div>
+                <div className="mt-1 whitespace-pre-line text-xs text-ink-soft">{g.note}</div>
               </Reveal>
             ))}
           </div>
@@ -53,7 +53,7 @@ export default function Home() {
           <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
             <Reveal>
               <p className="eyebrow text-brand-500">Technology &amp; Patents</p>
-              <h2 className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">
+              <h2 className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
                 그라우팅 기술로
                 <br />
                 지반의 안전을 설계합니다
@@ -81,13 +81,14 @@ export default function Home() {
                 <Reveal key={t.slug} i={i}>
                   <Link
                     href="/technology"
-                    className="group block rounded-sm bg-surface-2 p-6 ring-1 ring-line transition-all hover:ring-brand-300 hover:shadow-lg md:p-7"
+                    style={{ backgroundColor: ACCENT_COLORS[i % ACCENT_COLORS.length] }}
+                    className="group block rounded-sm p-6 text-white transition-all hover:shadow-lg md:p-7"
                   >
-                    <h3 className="text-xl font-bold group-hover:text-brand-600">{t.name}</h3>
-                    <p className="mt-2 text-sm text-ink-soft">{t.summary}</p>
+                    <h3 className="text-xl font-bold">{t.name}</h3>
+                    <p className="mt-2 text-sm text-white/85">{t.summary}</p>
                     <ul className="mt-4 flex flex-wrap gap-2">
                       {t.points.map((p) => (
-                        <li key={p} className="rounded-full bg-surface px-3 py-1 text-xs text-ink-soft ring-1 ring-line">
+                        <li key={p} className="rounded-full bg-white/15 px-3 py-1 text-xs text-white ring-1 ring-white/20">
                           {p}
                         </li>
                       ))}

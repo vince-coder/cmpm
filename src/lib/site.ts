@@ -28,7 +28,7 @@ export const NAV: NavItem[] = [
 
 // AT A GLANCE 지표 (★ 1번 = 특허 20+)
 export const GLANCE = [
-  { value: 20, suffix: "+", label: "보유 특허", note: "차수·강관다단 그라우팅" },
+  { value: 20, suffix: "+", label: "보유 특허", note: "차수·강관다단\n그라우팅" },
   { value: 2004, suffix: "", label: "설립연도", note: "축적된 시공 노하우", raw: true },
   { value: 150, suffix: "+", label: "누적 시공실적", note: "전국 주요 현장" },
   { value: 6, suffix: "종", label: "적용 분야", note: "저수지·터널·교량 등" },
