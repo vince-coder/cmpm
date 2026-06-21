@@ -26,7 +26,7 @@ export const VENTURE = {
 } as const;
 
 // 블록·아코디언 다양화용 액센트 (로열블루 톤 유지) — 순서대로 배정
-export const ACCENT_COLORS = ["#1f47d0", "#5a9a9d", "#4338ca", "#0369a1", "#7c3aed"];
+export const ACCENT_COLORS = ["#1f47d0", "#4db6ac", "#4338ca", "#0369a1", "#7c3aed"];
 
 export type NavItem = { label: string; href: string };
 
@@ -81,8 +81,8 @@ export const BUSINESS = [
   },
   {
     slug: "excavation",
-    name: "정밀 제어 굴착",
-    summary: "구조물·지장물에 인접한 구간에서 진동과 지반 변위를 최소화하는 정밀 제어 굴착으로 안전하게 시공합니다.",
+    name: "터널 정밀 제어 굴착",
+    summary: "구조물·지장물에 인접한 터널 구간에서 진동과 지반 변위를 최소화하는 정밀 제어 굴착으로 안전하게 시공합니다.",
     fields: ["무진동·저진동 굴착", "지반 변위 관리", "근접 구조물 시공"],
   },
 ];

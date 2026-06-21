@@ -17,7 +17,7 @@ export default function BusinessPage() {
     <PageShell
       eyebrow="Business"
       title="사업분야"
-      description="그라우팅 시공을 핵심으로 교량 유지보수·정밀 제어 굴착까지, 토목 인프라의 안전을 지원합니다."
+      description="그라우팅 시공을 핵심으로 교량 유지보수·터널 정밀 제어 굴착까지, 토목 인프라의 안전을 지원합니다."
     >
       <section className={block}>
         <p className="eyebrow text-brand-500">Our Business</p>
