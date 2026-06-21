@@ -5,7 +5,7 @@ import { NAV, COMPANY } from "@/lib/site";
 export function Footer() {
   return (
     <footer className="mt-24 bg-brand-900 text-brand-100">
-      <div className="container-cmpm grid gap-10 py-14 md:grid-cols-[1.4fr_1fr_1fr]">
+      <div className="container-cmpm grid gap-10 py-14 md:grid-cols-[1.4fr_2fr]">
         {/* 회사 */}
         <div>
           <div className="flex items-center gap-2.5">
@@ -22,28 +22,29 @@ export function Footer() {
           </div>
         </div>
 
-        {/* 바로가기 */}
-        <nav className="text-sm">
-          <h3 className="mb-3 font-semibold text-white">바로가기</h3>
-          <ul className="space-y-2">
-            {NAV.map((item) => (
-              <li key={item.href}>
-                <Link href={item.href} className="text-brand-200 hover:text-white">
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        {/* 바로가기 + 오시는 길 (제목 옆 가로 배치) */}
+        <div className="space-y-6 text-sm">
+          <nav className="flex flex-wrap items-baseline gap-x-5 gap-y-2">
+            <h3 className="font-semibold text-white">바로가기</h3>
+            <ul className="flex flex-wrap gap-x-4 gap-y-1">
+              {NAV.map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href} className="text-brand-200 hover:text-white">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
 
-        {/* 연락처 */}
-        <div className="text-sm">
-          <h3 className="mb-3 font-semibold text-white">오시는 길</h3>
-          <ul className="space-y-2 text-brand-200">
-            <li>{COMPANY.address}</li>
-            <li>TEL. {COMPANY.tel}</li>
-            <li>{COMPANY.email}</li>
-          </ul>
+          <div className="flex flex-wrap items-baseline gap-x-5 gap-y-2">
+            <h3 className="whitespace-nowrap font-semibold text-white">오시는 길</h3>
+            <ul className="flex flex-wrap gap-x-4 gap-y-1 text-brand-200">
+              <li>{COMPANY.address}</li>
+              <li>TEL. {COMPANY.tel}</li>
+              <li>{COMPANY.email}</li>
+            </ul>
+          </div>
         </div>
       </div>
 
