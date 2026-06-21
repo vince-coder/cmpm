@@ -34,7 +34,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="mt-5 max-w-3xl text-4xl font-bold leading-[1.15] tracking-tight md:text-6xl"
+          className="mt-5 max-w-3xl text-[1.75rem] font-bold leading-[1.2] tracking-tight sm:text-4xl sm:leading-[1.15] md:text-6xl"
         >
           그라우팅 특화 기술과
           <br />
