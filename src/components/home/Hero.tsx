@@ -3,7 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "motion/react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, BadgeCheck } from "lucide-react";
+import { VENTURE } from "@/lib/site";
 
 export function Hero() {
   return (
@@ -21,11 +22,21 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-brand-600/70 via-brand-600/40 to-brand-600/10" />
 
       <div className="relative z-10 flex min-h-[70vh] flex-col justify-center px-6 py-24 sm:px-10 md:min-h-[74vh] md:px-16 md:py-28">
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="eyebrow text-brand-200"
+          className="inline-flex w-fit items-center gap-1.5 rounded-full bg-white/15 px-3 py-1.5 text-xs font-semibold text-white ring-1 ring-white/30 backdrop-blur-sm sm:text-sm"
+        >
+          <BadgeCheck size={16} className="text-brand-200" />
+          {VENTURE.badge} · {VENTURE.type}
+        </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.05 }}
+          className="eyebrow mt-4 text-brand-200"
         >
           Grouting Specialist · 20+ Patents
         </motion.p>
@@ -49,8 +60,8 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.25 }}
           className="mt-6 max-w-xl text-base text-brand-100 md:text-lg"
         >
-          차수·강관다단 그라우팅 전문기업 CMPM. 저수지·터널·교량·상하수도까지,
-          검증된 기술로 인프라의 안전을 책임집니다.
+          차수·강관다단 그라우팅 전문기업 CMPM. 기술력을 공인받은 벤처기업으로,
+          저수지·터널·교량·상하수도까지 검증된 기술로 인프라의 안전을 책임집니다.
         </motion.p>
 
         <motion.div

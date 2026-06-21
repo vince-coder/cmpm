@@ -13,6 +13,18 @@ export const COMPANY = {
   domain: "www.cmpm-group.com",
 } as const;
 
+// 벤처기업 확인 (혁신성장유형) — 확인서 원본 public/certs/
+export const VENTURE = {
+  badge: "벤처기업 확인기업",
+  type: "혁신성장유형",
+  number: "제20250729030056호",
+  issuer: "(사)벤처기업협회",
+  validFrom: "2025.07.29",
+  validTo: "2028.07.28",
+  pdf: "/certs/venture-2025.pdf",
+  image: "/certs/venture-2025.png",
+} as const;
+
 // 블록·아코디언 다양화용 액센트 (로열블루 톤 유지) — 순서대로 배정
 export const ACCENT_COLORS = ["#1f47d0", "#0d9488", "#4338ca", "#0369a1", "#7c3aed"];
 

@@ -1,7 +1,8 @@
+import Image from "next/image";
 import { PageShell, block } from "@/components/site/PageShell";
 import { Reveal } from "@/components/ui/Reveal";
-import { COMPANY, HISTORY } from "@/lib/site";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { COMPANY, HISTORY, VENTURE } from "@/lib/site";
+import { MapPin, Phone, Mail, BadgeCheck, FileText } from "lucide-react";
 
 export const metadata = { title: "회사소개" };
 
@@ -47,6 +48,70 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* 인증 — 벤처기업확인서 */}
+      <section className={block}>
+        <Reveal>
+          <p className="eyebrow text-brand-500">Certification</p>
+          <h2 className="mt-2 text-2xl font-bold tracking-tight md:text-3xl">인증 현황</h2>
+          <p className="mt-3 text-ink-soft">
+            기술력과 성장성을 공인받은 벤처기업입니다.
+          </p>
+        </Reveal>
+
+        <Reveal>
+          <div className="mt-8 grid items-start gap-8 md:grid-cols-[280px_1fr]">
+            {/* 확인서 이미지 — 클릭 시 원본 PDF */}
+            <a
+              href={VENTURE.pdf}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block overflow-hidden rounded-sm ring-1 ring-line transition hover:ring-brand-400 hover:shadow-lg"
+            >
+              <Image
+                src={VENTURE.image}
+                alt={`${COMPANY.nameKo} 벤처기업확인서`}
+                width={560}
+                height={727}
+                className="h-auto w-full transition-transform group-hover:scale-[1.02]"
+              />
+            </a>
+
+            {/* 상세 정보 + 다운로드 */}
+            <div>
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-50 px-3 py-1.5 text-sm font-semibold text-brand-700 ring-1 ring-brand-100">
+                <BadgeCheck size={16} />
+                {VENTURE.badge}
+              </span>
+              <h3 className="mt-4 text-xl font-bold tracking-tight">벤처기업확인서</h3>
+              <p className="mt-2 text-ink-soft">
+                「벤처기업육성에 관한 특별법」에 따라 기술의 혁신성과 사업의 성장성을
+                인정받아 벤처기업으로 확인받았습니다.
+              </p>
+
+              <dl className="mt-6 grid gap-px overflow-hidden rounded-sm bg-line ring-1 ring-line sm:grid-cols-2">
+                <CertRow label="확인유형" value={VENTURE.type} />
+                <CertRow label="확인번호" value={VENTURE.number} />
+                <CertRow
+                  label="유효기간"
+                  value={`${VENTURE.validFrom} ~ ${VENTURE.validTo}`}
+                />
+                <CertRow label="확인기관" value={VENTURE.issuer} />
+              </dl>
+
+              <a
+                href={VENTURE.pdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center gap-2 rounded-full bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white transition-transform hover:scale-105"
+              >
+                <FileText size={16} />
+                확인서 원본 보기 (PDF)
+              </a>
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
       {/* 오시는 길 */}
       <section className={block}>
         <Reveal>
@@ -74,6 +139,15 @@ export default function AboutPage() {
         </div>
       </section>
     </PageShell>
+  );
+}
+
+function CertRow({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="bg-surface px-4 py-3">
+      <dt className="text-xs font-semibold text-brand-600">{label}</dt>
+      <dd className="mt-0.5 text-sm text-ink">{value}</dd>
+    </div>
   );
 }
 
