@@ -89,12 +89,12 @@ export const BUSINESS = [
 
 // 대표 실적 (LANDMARK) — 더미
 export const PROJECTS = [
-  { slug: "reservoir-a", title: "OO저수지 차수 그라우팅", category: "저수지", year: 2024, client: "한국농어촌공사" },
-  { slug: "tunnel-b", title: "OO터널 강관다단 보강", category: "터널", year: 2023, client: "국가철도공단" },
-  { slug: "bridge-c", title: "OO대교 교량 보수보강", category: "교량", year: 2023, client: "OO시청" },
-  { slug: "subway-d", title: "도시철도 OO공구 차수", category: "지하철", year: 2022, client: "OO교통공사" },
-  { slug: "water-e", title: "OO지구 상수도 관로 갱생", category: "상하수도", year: 2022, client: "OO시 상수도사업본부" },
-  { slug: "road-f", title: "국도 OO호선 연약지반 보강", category: "도로", year: 2021, client: "OO국토관리청" },
+  { slug: "reservoir-a", title: "OO저수지 차수 그라우팅", category: "저수지", year: 2024, client: "지방자치단체" },
+  { slug: "tunnel-b", title: "OO터널 강관다단 보강", category: "터널", year: 2023, client: "대우건설 / 전라남도" },
+  { slug: "bridge-c", title: "OO대교 교량 보수보강", category: "교량", year: 2023, client: "광주광역시청" },
+  { slug: "subway-d", title: "도시철도 OO공구 차수", category: "지하철", year: 2022, client: "광주도시철도본부" },
+  { slug: "water-e", title: "상하수도 전체 및 부분 보수", category: "상하수도", year: 2022, client: "OO시 상수도사업본부" },
+  { slug: "road-f", title: "시트·우레탄·우레아 복합 방수", category: "방수", year: 2021, client: "OO국토관리청" },
 ];
 
 // 연혁 (면허·등록 이력) — 최신 연도부터
