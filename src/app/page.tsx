@@ -63,18 +63,16 @@ export default function Home() {
                 <strong className="text-ink"> 20여 건의 보유 특허</strong>가 CMPM의 가장
                 강력한 차별점입니다.
               </p>
-              <div className="text-center sm:text-left">
-                <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-brand-50 px-4 py-2 text-sm font-semibold text-brand-600">
-                  <ShieldCheck size={18} /> 특허전문기업 · 보유 특허 20+건
-                </div>
-                <div className="mt-8">
-                  <Link
-                    href="/technology"
-                    className="inline-flex items-center gap-1.5 font-semibold text-brand-600 transition-all hover:gap-2.5"
-                  >
-                    기술·특허 자세히 보기 <ArrowRight size={18} />
-                  </Link>
-                </div>
+              <div className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-600 sm:mt-6 sm:gap-2 sm:px-4 sm:py-2 sm:text-sm">
+                <ShieldCheck size={16} /> 특허전문기업 · 보유 특허 20+건
+              </div>
+              <div className="mt-8 text-center sm:text-left">
+                <Link
+                  href="/technology"
+                  className="inline-flex items-center gap-1.5 font-semibold text-brand-600 transition-all hover:gap-2.5"
+                >
+                  기술·특허 자세히 보기 <ArrowRight size={18} />
+                </Link>
               </div>
             </Reveal>
 
