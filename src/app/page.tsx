@@ -52,7 +52,7 @@ export default function Home() {
 
         {/* ===================== 핵심 기술·특허 ===================== */}
         <section className={block}>
-          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-12">
+          <div className="grid gap-4 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-12">
             <Reveal>
               <p className="eyebrow text-brand-500">Technology &amp; Patents</p>
               <h2 className="mt-2 hidden text-2xl font-bold tracking-tight sm:block sm:text-3xl md:text-4xl">
