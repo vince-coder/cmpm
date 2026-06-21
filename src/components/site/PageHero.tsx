@@ -8,14 +8,15 @@ export function PageHero({
   description?: string;
 }) {
   return (
-    <section className="relative overflow-hidden rounded-md bg-brand-900 text-white">
-      <div className="absolute inset-0 bg-gradient-to-br from-brand-800 to-brand-900" />
-      <div className="absolute inset-0 opacity-[0.12] [background-image:linear-gradient(white_1px,transparent_1px),linear-gradient(90deg,white_1px,transparent_1px)] [background-size:48px_48px]" />
+    <section
+      className="relative overflow-hidden rounded-md text-white"
+      style={{ backgroundColor: "#3f54cf" }}
+    >
       <div className="relative px-6 py-20 sm:px-10 md:px-16 md:py-24">
-        <p className="eyebrow text-brand-200">{eyebrow}</p>
+        <p className="eyebrow text-white/70">{eyebrow}</p>
         <h1 className="mt-3 text-3xl font-bold tracking-tight md:text-5xl">{title}</h1>
         {description && (
-          <p className="mt-5 max-w-2xl text-brand-100 md:text-lg">{description}</p>
+          <p className="mt-5 max-w-2xl text-white/85 md:text-lg">{description}</p>
         )}
       </div>
     </section>
