@@ -32,17 +32,19 @@ export default function Home() {
               숫자로 보는 CMPM
             </h2>
           </Reveal>
-          <div className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-line bg-line md:grid-cols-4">
+          <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
             {GLANCE.map((g, i) => (
-              <Reveal key={g.label} i={i} className="bg-surface px-3 py-7 text-center sm:px-6 sm:py-8">
+              <Reveal key={g.label} i={i} className="h-full">
                 <div
-                  className="font-display text-3xl font-extrabold sm:text-4xl md:text-5xl"
-                  style={{ color: ACCENT_COLORS[i % ACCENT_COLORS.length] }}
+                  className="flex h-full flex-col rounded-sm px-3 py-7 text-center text-white sm:px-6 sm:py-8"
+                  style={{ backgroundColor: ACCENT_COLORS[i % ACCENT_COLORS.length] }}
                 >
-                  <CountUp to={g.value} suffix={g.suffix} raw={g.raw} />
+                  <div className="font-display text-3xl font-extrabold sm:text-4xl md:text-5xl">
+                    <CountUp to={g.value} suffix={g.suffix} raw={g.raw} />
+                  </div>
+                  <div className="mt-2 text-sm font-semibold">{g.label}</div>
+                  <div className="mt-1 whitespace-pre-line text-xs text-white/75">{g.note}</div>
                 </div>
-                <div className="mt-2 text-sm font-semibold">{g.label}</div>
-                <div className="mt-1 whitespace-pre-line text-xs text-ink-soft">{g.note}</div>
               </Reveal>
             ))}
           </div>
