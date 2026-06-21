@@ -58,21 +58,23 @@ export default function Home() {
                 <br />
                 지반의 안전을 설계합니다
               </h2>
-              <p className="mt-5 max-w-md text-ink-soft">
+              <p className="mt-5 hidden max-w-md text-ink-soft sm:block">
                 차수·강관다단 그라우팅을 중심으로 한 독자 기술과
                 <strong className="text-ink"> 20여 건의 보유 특허</strong>가 CMPM의 가장
                 강력한 차별점입니다.
               </p>
-              <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-brand-50 px-4 py-2 text-sm font-semibold text-brand-600">
-                <ShieldCheck size={18} /> 특허전문기업 · 보유 특허 20+건
-              </div>
-              <div className="mt-8">
-                <Link
-                  href="/technology"
-                  className="inline-flex items-center gap-1.5 font-semibold text-brand-600 transition-all hover:gap-2.5"
-                >
-                  기술·특허 자세히 보기 <ArrowRight size={18} />
-                </Link>
+              <div className="text-center sm:text-left">
+                <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-brand-50 px-4 py-2 text-sm font-semibold text-brand-600">
+                  <ShieldCheck size={18} /> 특허전문기업 · 보유 특허 20+건
+                </div>
+                <div className="mt-8">
+                  <Link
+                    href="/technology"
+                    className="inline-flex items-center gap-1.5 font-semibold text-brand-600 transition-all hover:gap-2.5"
+                  >
+                    기술·특허 자세히 보기 <ArrowRight size={18} />
+                  </Link>
+                </div>
               </div>
             </Reveal>
 
