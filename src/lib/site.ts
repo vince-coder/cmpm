@@ -26,7 +26,7 @@ export const VENTURE = {
 } as const;
 
 // 블록·아코디언 다양화용 액센트 (로열블루 톤 유지) — 순서대로 배정
-export const ACCENT_COLORS = ["#1f47d0", "#0d9488", "#4338ca", "#0369a1", "#7c3aed"];
+export const ACCENT_COLORS = ["#1f47d0", "#5a9a9d", "#4338ca", "#0369a1", "#7c3aed"];
 
 export type NavItem = { label: string; href: string };
 
@@ -94,7 +94,7 @@ export const PROJECTS = [
   { slug: "bridge-c", title: "OO대교 교량 보수보강", category: "교량", year: 2023, client: "광주광역시청" },
   { slug: "subway-d", title: "도시철도 OO공구 차수", category: "지하철", year: 2022, client: "광주도시철도본부" },
   { slug: "water-e", title: "상하수도 전체 및 부분 보수", category: "상하수도", year: 2022, client: "OO시 상수도사업본부" },
-  { slug: "road-f", title: "시트·우레탄·우레아 복합 방수", category: "방수", year: 2021, client: "OO국토관리청" },
+  { slug: "road-f", title: "시트·우레탄·우레아 복합 방수", category: "방수", year: 2021, client: "지방자치단체" },
 ];
 
 // 연혁 (면허·등록 이력) — 최신 연도부터

@@ -39,7 +39,7 @@ export default function Home() {
                   className="flex h-full flex-col rounded-sm px-3 py-7 text-center text-white sm:px-6 sm:py-8"
                   style={{ backgroundColor: ACCENT_COLORS[i % ACCENT_COLORS.length] }}
                 >
-                  <div className="font-display text-3xl font-extrabold sm:text-4xl md:text-5xl">
+                  <div className="font-display text-2xl font-bold sm:text-3xl md:text-4xl">
                     <CountUp to={g.value} suffix={g.suffix} raw={g.raw} />
                   </div>
                   <div className="mt-2 text-sm font-semibold">{g.label}</div>
