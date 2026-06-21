@@ -20,9 +20,6 @@ export function Footer() {
               씨엠피엠건설
             </span>
           </div>
-          <p className="mt-3 max-w-xs text-sm leading-relaxed text-brand-200">
-            {COMPANY.tagline}
-          </p>
         </div>
 
         {/* 바로가기 */}
