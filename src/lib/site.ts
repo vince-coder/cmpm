@@ -5,9 +5,9 @@ export const COMPANY = {
   name: "씨엠피엠",
   nameEn: "CMPM",
   tagline: "그라우팅 특화 · 특허전문 토목기업",
-  established: 2009, // TODO: 실제 설립연도로 교체
-  address: "OO시 OO구 OO로 00 (TODO: 실제 주소)",
-  tel: "00-000-0000",
+  established: 2004,
+  address: "광주광역시 서구 유림로98번길 43, 6층",
+  tel: "062-381-9257",
   email: "contact@cmpm-group.com",
   domain: "www.cmpm-group.com",
 } as const;
@@ -26,7 +26,7 @@ export const NAV: NavItem[] = [
 // AT A GLANCE 지표 (★ 1번 = 특허 20+)
 export const GLANCE = [
   { value: 20, suffix: "+", label: "보유 특허", note: "차수·강관다단 그라우팅" },
-  { value: 2009, suffix: "", label: "설립연도", note: "축적된 시공 노하우", raw: true },
+  { value: 2004, suffix: "", label: "설립연도", note: "축적된 시공 노하우", raw: true },
   { value: 150, suffix: "+", label: "누적 시공실적", note: "전국 주요 현장" },
   { value: 6, suffix: "종", label: "적용 분야", note: "저수지·터널·교량 등" },
 ];
@@ -79,6 +79,40 @@ export const PROJECTS = [
   { slug: "subway-d", title: "도시철도 OO공구 차수", category: "지하철", year: 2022, client: "OO교통공사" },
   { slug: "water-e", title: "OO지구 상수도 관로 갱생", category: "상하수도", year: 2022, client: "OO시 상수도사업본부" },
   { slug: "road-f", title: "국도 OO호선 연약지반 보강", category: "도로", year: 2021, client: "OO국토관리청" },
+];
+
+// 연혁 (면허·등록 이력) — 최신 연도부터
+export const HISTORY = [
+  {
+    year: 2011,
+    items: [
+      { month: "06", event: "신재생에너지 설비 설치 전문기업 등록" },
+      { month: "04", event: "토공사업 면허 취득" },
+    ],
+  },
+  {
+    year: 2009,
+    items: [{ month: "04", event: "석공사업 면허 취득" }],
+  },
+  {
+    year: 2008,
+    items: [{ month: "07", event: "엔지니어링사업자 신고증 취득" }],
+  },
+  {
+    year: 2007,
+    items: [
+      { month: "06", event: "지하수영향조사기관 지정" },
+      { month: "05", event: "철근콘크리트공사업 면허 취득" },
+    ],
+  },
+  {
+    year: 2004,
+    items: [
+      { month: "09", event: "보링그라우팅공사업 면허 취득" },
+      { month: "08", event: "지하수개발·이용시공업 등록" },
+      { month: "07", event: "씨엠피엠건설(주) 설립" },
+    ],
+  },
 ];
 
 // 공지·소식 — 더미

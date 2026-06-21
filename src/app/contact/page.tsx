@@ -45,8 +45,16 @@ export default function ContactPage() {
           <Info icon={<MapPin size={20} />} label="주소" value={COMPANY.address} />
           <Info icon={<Phone size={20} />} label="전화" value={COMPANY.tel} />
           <Info icon={<Mail size={20} />} label="이메일" value={COMPANY.email} />
-          <div className="flex aspect-[16/10] items-center justify-center rounded-2xl border border-dashed border-line bg-surface-2 text-sm text-ink-soft">
-            Kakao Map (오시는 길) — 추후 연동
+          <div className="overflow-hidden rounded-2xl border border-line">
+            <iframe
+              title="오시는 길"
+              src={`https://maps.google.com/maps?q=${encodeURIComponent(
+                COMPANY.address
+              )}&hl=ko&z=16&output=embed`}
+              className="aspect-[16/10] w-full"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </div>
       </section>
