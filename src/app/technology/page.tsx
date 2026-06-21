@@ -29,7 +29,7 @@ export default function TechnologyPage() {
                     ))}
                   </ul>
                 </div>
-                <div className="aspect-[4/3] rounded-lg bg-gradient-to-br from-brand-600 to-brand-800" />
+                <div className="aspect-[4/3] rounded-sm bg-gradient-to-br from-brand-600 to-brand-800" />
               </div>
             </Reveal>
           ))}
@@ -46,7 +46,7 @@ export default function TechnologyPage() {
           {Array.from({ length: 10 }).map((_, i) => (
             <div
               key={i}
-              className="flex aspect-[3/4] items-center justify-center rounded-xl border border-dashed border-line bg-surface-2 text-xs text-ink-soft"
+              className="flex aspect-[3/4] items-center justify-center rounded-md border border-dashed border-line bg-surface-2 text-xs text-ink-soft"
             >
               특허 #{i + 1}
             </div>

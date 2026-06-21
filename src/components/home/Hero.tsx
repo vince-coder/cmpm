@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative isolate overflow-hidden rounded-xl bg-brand-900 text-white">
+    <section className="relative isolate overflow-hidden rounded-md bg-brand-900 text-white">
       {/* 배경: 딥블루 그라데이션 + 미세 패턴 (실제 현장 사진으로 교체 예정) */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-brand-800 via-brand-700 to-brand-900" />
       <div className="absolute inset-0 -z-10 opacity-[0.15] [background-image:linear-gradient(white_1px,transparent_1px),linear-gradient(90deg,white_1px,transparent_1px)] [background-size:48px_48px]" />

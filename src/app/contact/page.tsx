@@ -26,7 +26,7 @@ export default function ContactPage() {
               <textarea
                 name="message"
                 rows={6}
-                className="w-full rounded-lg border border-line bg-surface px-4 py-3 text-sm outline-none focus:border-brand-400 focus:ring-2 focus:ring-brand-100"
+                className="w-full rounded-sm border border-line bg-surface px-4 py-3 text-sm outline-none focus:border-brand-400 focus:ring-2 focus:ring-brand-100"
               />
             </div>
             <button
@@ -45,7 +45,7 @@ export default function ContactPage() {
             <Info icon={<MapPin size={20} />} label="주소" value={COMPANY.address} />
             <Info icon={<Phone size={20} />} label="전화" value={COMPANY.tel} />
             <Info icon={<Mail size={20} />} label="이메일" value={COMPANY.email} />
-            <div className="overflow-hidden rounded-lg ring-1 ring-line">
+            <div className="overflow-hidden rounded-sm ring-1 ring-line">
               <iframe
                 title="오시는 길"
                 src={`https://maps.google.com/maps?q=${encodeURIComponent(
@@ -78,7 +78,7 @@ function Field({
       <input
         type={type}
         name={name}
-        className="w-full rounded-lg border border-line bg-surface px-4 py-3 text-sm outline-none focus:border-brand-400 focus:ring-2 focus:ring-brand-100"
+        className="w-full rounded-sm border border-line bg-surface px-4 py-3 text-sm outline-none focus:border-brand-400 focus:ring-2 focus:ring-brand-100"
       />
     </div>
   );
@@ -95,7 +95,7 @@ function Info({
 }) {
   return (
     <div className="flex items-start gap-4">
-      <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-50 text-brand-600">
+      <span className="inline-flex h-11 w-11 items-center justify-center rounded-md bg-brand-50 text-brand-600">
         {icon}
       </span>
       <div>

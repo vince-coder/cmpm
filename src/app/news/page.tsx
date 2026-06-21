@@ -12,7 +12,7 @@ export default function NewsPage() {
       description="수주·특허 등록·수상 등 CMPM의 소식을 전합니다."
     >
       <section className={block}>
-        <ul className="divide-y divide-line overflow-hidden rounded-lg bg-surface-2 ring-1 ring-line">
+        <ul className="divide-y divide-line overflow-hidden rounded-sm bg-surface-2 ring-1 ring-line">
           {NEWS.map((n, i) => (
             <Reveal as="li" key={n.slug} i={i}>
               <div className="flex items-center gap-4 px-6 py-5">

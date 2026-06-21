@@ -8,7 +8,7 @@ export function PageHero({
   description?: string;
 }) {
   return (
-    <section className="relative overflow-hidden rounded-xl bg-brand-900 text-white">
+    <section className="relative overflow-hidden rounded-md bg-brand-900 text-white">
       <div className="absolute inset-0 bg-gradient-to-br from-brand-800 to-brand-900" />
       <div className="absolute inset-0 opacity-[0.12] [background-image:linear-gradient(white_1px,transparent_1px),linear-gradient(90deg,white_1px,transparent_1px)] [background-size:48px_48px]" />
       <div className="relative px-6 py-20 sm:px-10 md:px-16 md:py-24">
@@ -25,7 +25,7 @@ export function PageHero({
 /** 아직 콘텐츠 자료 대기 중인 섹션 표시용 (개발 진행 중 안내) */
 export function Placeholder({ note }: { note: string }) {
   return (
-    <div className="rounded-lg border border-dashed border-line bg-surface-2 p-10 text-center text-ink-soft">
+    <div className="rounded-sm border border-dashed border-line bg-surface-2 p-10 text-center text-ink-soft">
       <p className="font-semibold text-ink">제작 중 섹션</p>
       <p className="mt-2 text-sm">{note}</p>
     </div>

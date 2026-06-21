@@ -32,7 +32,7 @@ export default function Home() {
               숫자로 보는 CMPM
             </h2>
           </Reveal>
-          <div className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-line bg-line md:grid-cols-4">
+          <div className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-line bg-line md:grid-cols-4">
             {GLANCE.map((g, i) => (
               <Reveal key={g.label} i={i} className="bg-surface px-6 py-8 text-center">
                 <div
@@ -81,7 +81,7 @@ export default function Home() {
                 <Reveal key={t.slug} i={i}>
                   <Link
                     href="/technology"
-                    className="group block rounded-lg bg-surface-2 p-6 ring-1 ring-line transition-all hover:ring-brand-300 hover:shadow-lg md:p-7"
+                    className="group block rounded-sm bg-surface-2 p-6 ring-1 ring-line transition-all hover:ring-brand-300 hover:shadow-lg md:p-7"
                   >
                     <h3 className="text-xl font-bold group-hover:text-brand-600">{t.name}</h3>
                     <p className="mt-2 text-sm text-ink-soft">{t.summary}</p>
@@ -133,7 +133,7 @@ export default function Home() {
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {PROJECTS.slice(0, 6).map((p, i) => (
               <Reveal key={p.slug} i={i % 3}>
-                <Link href="/projects" className="group block overflow-hidden rounded-lg ring-1 ring-line">
+                <Link href="/projects" className="group block overflow-hidden rounded-sm ring-1 ring-line">
                   <div className="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-brand-600 to-brand-800">
                     <div className="absolute inset-0 opacity-20 [background-image:radial-gradient(circle_at_30%_20%,white,transparent_55%)]" />
                     <span className="absolute left-4 top-4 rounded bg-white/15 px-2.5 py-1 text-xs font-medium text-white backdrop-blur">
@@ -166,7 +166,7 @@ export default function Home() {
             </Link>
           </Reveal>
 
-          <ul className="mt-8 divide-y divide-line overflow-hidden rounded-lg bg-surface-2 ring-1 ring-line">
+          <ul className="mt-8 divide-y divide-line overflow-hidden rounded-sm bg-surface-2 ring-1 ring-line">
             {NEWS.map((n, i) => (
               <Reveal as="li" key={n.slug} i={i}>
                 <Link href="/news" className="flex items-center gap-4 px-6 py-5 transition-colors hover:bg-surface">
@@ -182,7 +182,7 @@ export default function Home() {
         </section>
 
         {/* ===================== CTA ===================== */}
-        <section className="overflow-hidden rounded-xl bg-brand-600">
+        <section className="overflow-hidden rounded-md bg-brand-600">
           <div className="flex flex-col items-center gap-6 px-6 py-16 text-center md:py-20">
             <Reveal>
               <h2 className="text-2xl font-bold text-white md:text-3xl">

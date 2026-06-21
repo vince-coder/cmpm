@@ -28,7 +28,7 @@ export function Accordion({
         return (
           <div
             key={i}
-            className="overflow-hidden rounded-lg ring-1 ring-line transition-colors duration-300"
+            className="overflow-hidden rounded-sm ring-1 ring-line transition-colors duration-300"
             style={isOpen ? { backgroundColor: it.color, boxShadow: "none" } : undefined}
           >
             <button
