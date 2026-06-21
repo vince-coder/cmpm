@@ -66,7 +66,7 @@ export default function AboutPage() {
         </Reveal>
 
         <Reveal>
-          <div className="mt-8 grid items-start gap-8 md:grid-cols-[280px_1fr]">
+          <div className="mt-8 grid items-start gap-4 md:grid-cols-[280px_1fr] md:gap-8">
             {/* 확인서 이미지 — 클릭 시 원본 PDF */}
             <a
               href={VENTURE.pdf}
@@ -95,7 +95,7 @@ export default function AboutPage() {
                 인정받아 벤처기업으로 확인받았습니다.
               </p>
 
-              <dl className="mt-6 grid gap-px overflow-hidden rounded-sm bg-line ring-1 ring-line sm:grid-cols-2">
+              <dl className="mt-0 grid gap-px overflow-hidden rounded-sm bg-line ring-1 ring-line sm:grid-cols-2 md:mt-6">
                 <CertRow label="확인유형" value={VENTURE.type} />
                 <CertRow label="확인번호" value={VENTURE.number} />
                 <CertRow
@@ -109,7 +109,7 @@ export default function AboutPage() {
                 href={VENTURE.pdf}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mx-auto mt-6 flex w-fit items-center gap-2 rounded-full bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white transition-transform hover:scale-105 md:mx-0 md:inline-flex"
+                className="mt-6 flex w-fit items-center gap-1.5 rounded-full bg-brand-600 px-4 py-2 text-xs font-semibold text-white transition-transform hover:scale-105 sm:gap-2 sm:px-5 sm:py-2.5 sm:text-sm md:inline-flex"
               >
                 <FileText size={16} />
                 확인서 원본 보기 (PDF)
@@ -174,7 +174,7 @@ function Info({
       </span>
       <div>
         <div className="text-sm font-semibold">{label}</div>
-        <div className="mt-0.5 text-sm text-ink-soft sm:text-base">{value}</div>
+        <div className="mt-0.5 text-xs text-ink-soft sm:text-base">{value}</div>
       </div>
     </div>
   );
