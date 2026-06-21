@@ -28,11 +28,11 @@ export default function Home() {
         <section className={block}>
           <Reveal>
             <p className="eyebrow text-brand-500">At a glance</p>
-            <h2 className="mt-2 text-2xl font-bold tracking-tight md:text-3xl">
+            <h2 className="mt-2 hidden text-2xl font-bold tracking-tight md:block md:text-3xl">
               숫자로 보는 CMPM
             </h2>
           </Reveal>
-          <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
+          <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4 md:mt-8 md:grid-cols-4">
             {GLANCE.map((g, i) => (
               <Reveal key={g.label} i={i} className="h-full">
                 <div
@@ -55,7 +55,7 @@ export default function Home() {
           <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
             <Reveal>
               <p className="eyebrow text-brand-500">Technology &amp; Patents</p>
-              <h2 className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
+              <h2 className="mt-2 hidden text-2xl font-bold tracking-tight sm:block sm:text-3xl md:text-4xl">
                 그라우팅 기술로
                 <br />
                 지반의 안전을 설계합니다
@@ -107,7 +107,7 @@ export default function Home() {
         <section className={block}>
           <Reveal className="max-w-2xl">
             <p className="eyebrow text-brand-500">Business</p>
-            <h2 className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">사업분야</h2>
+            <h2 className="mt-2 hidden text-3xl font-bold tracking-tight md:block md:text-4xl">사업분야</h2>
             <p className="mt-4 text-ink-soft">
               그라우팅 시공을 핵심으로, 교량 유지보수·터널 정밀 제어 굴착까지 토목 인프라의 안전을 폭넓게
               지원합니다.
@@ -124,7 +124,7 @@ export default function Home() {
           <Reveal className="flex flex-wrap items-end justify-between gap-4">
             <div>
               <p className="eyebrow text-brand-500">Landmark</p>
-              <h2 className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">대표 시공실적</h2>
+              <h2 className="mt-2 hidden text-3xl font-bold tracking-tight md:block md:text-4xl">대표 시공실적</h2>
             </div>
             <Link
               href="/projects"
@@ -198,12 +198,13 @@ export default function Home() {
                 그라우팅 시공부터 유지보수까지, 기술로 답하는 토목 파트너.
               </p>
             </Reveal>
-            <Reveal i={1} className="self-center">
+            <Reveal i={1} className="self-start md:self-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 font-semibold text-brand-700 transition-transform hover:scale-105"
+                className="inline-flex items-center gap-1.5 rounded-full bg-white px-4 py-2.5 text-sm font-semibold text-brand-700 transition-transform hover:scale-105 sm:gap-2 sm:px-7 sm:py-3.5 sm:text-base"
               >
-                프로젝트 문의하기 <ArrowRight size={18} />
+                프로젝트 문의하기 <ArrowRight size={16} className="sm:hidden" />
+                <ArrowRight size={18} className="hidden sm:inline" />
               </Link>
             </Reveal>
           </div>

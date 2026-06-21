@@ -35,10 +35,12 @@ export default function AboutPage() {
                   {group.items.map((item, ii) => (
                     <li key={ii} className="relative">
                       <span className="absolute -left-[1.625rem] top-2 h-2 w-2 rounded-full bg-brand-400" />
-                      <span className="inline-block w-12 font-semibold text-ink">
+                      <span className="block font-semibold text-ink sm:inline-block sm:w-12">
                         {item.month}월
                       </span>
-                      <span className="text-ink-soft">{item.event}</span>
+                      <span className="mt-0.5 block text-sm text-ink-soft sm:mt-0 sm:inline sm:text-base">
+                        {item.event}
+                      </span>
                     </li>
                   ))}
                 </ul>
@@ -52,10 +54,15 @@ export default function AboutPage() {
       <section className={block}>
         <Reveal>
           <p className="eyebrow text-brand-500">Certification</p>
-          <h2 className="mt-2 text-2xl font-bold tracking-tight md:text-3xl">인증 현황</h2>
-          <p className="mt-3 text-ink-soft">
+          <h2 className="mt-2 hidden text-2xl font-bold tracking-tight md:block md:text-3xl">인증 현황</h2>
+          <p className="mt-3 hidden text-ink-soft md:block">
             기술력과 성장성을 공인받은 벤처기업입니다.
           </p>
+          {/* 모바일 전용 배지 — 이미지 위 */}
+          <span className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-brand-50 px-3 py-1.5 text-sm font-semibold text-brand-700 ring-1 ring-brand-100 md:hidden">
+            <BadgeCheck size={16} />
+            {VENTURE.badge}
+          </span>
         </Reveal>
 
         <Reveal>
@@ -78,12 +85,12 @@ export default function AboutPage() {
 
             {/* 상세 정보 + 다운로드 */}
             <div>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-50 px-3 py-1.5 text-sm font-semibold text-brand-700 ring-1 ring-brand-100">
+              <span className="hidden items-center gap-1.5 rounded-full bg-brand-50 px-3 py-1.5 text-sm font-semibold text-brand-700 ring-1 ring-brand-100 md:inline-flex">
                 <BadgeCheck size={16} />
                 {VENTURE.badge}
               </span>
-              <h3 className="mt-4 text-xl font-bold tracking-tight">벤처기업확인서</h3>
-              <p className="mt-2 text-ink-soft">
+              <h3 className="hidden text-xl font-bold tracking-tight md:mt-4 md:block">벤처기업확인서</h3>
+              <p className="mt-2 hidden text-ink-soft md:block">
                 「벤처기업육성에 관한 특별법」에 따라 기술의 혁신성과 사업의 성장성을
                 인정받아 벤처기업으로 확인받았습니다.
               </p>
@@ -102,7 +109,7 @@ export default function AboutPage() {
                 href={VENTURE.pdf}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center gap-2 rounded-full bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white transition-transform hover:scale-105"
+                className="mx-auto mt-6 flex w-fit items-center gap-2 rounded-full bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white transition-transform hover:scale-105 md:mx-0 md:inline-flex"
               >
                 <FileText size={16} />
                 확인서 원본 보기 (PDF)
@@ -167,7 +174,7 @@ function Info({
       </span>
       <div>
         <div className="text-sm font-semibold">{label}</div>
-        <div className="mt-0.5 text-ink-soft">{value}</div>
+        <div className="mt-0.5 text-sm text-ink-soft sm:text-base">{value}</div>
       </div>
     </div>
   );
