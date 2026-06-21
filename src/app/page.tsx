@@ -60,14 +60,15 @@ export default function Home() {
                 <br />
                 지반의 안전을 설계합니다
               </h2>
-              <p className="mt-5 hidden max-w-md text-ink-soft sm:block">
-                차수·강관다단 그라우팅을 중심으로 한 독자 기술과
-                <strong className="text-ink"> 20여 건의 보유 특허</strong>가 CMPM의 가장
-                강력한 차별점입니다.
-              </p>
               <div className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-600 sm:mt-6 sm:gap-2 sm:px-4 sm:py-2 sm:text-sm">
                 <ShieldCheck size={16} /> 특허전문기업 · 보유 특허 20+건
               </div>
+              <p className="mt-5 hidden max-w-md text-ink-soft sm:block">
+                차수·강관다단 그라우팅을 중심으로 한 독자 기술과
+                <br />
+                <strong className="text-ink">20여 건의 보유 특허</strong>가 CMPM의 가장
+                강력한 차별점입니다.
+              </p>
               <div className="mt-8 text-center sm:text-left">
                 <Link
                   href="/technology"
@@ -186,16 +187,18 @@ export default function Home() {
 
         {/* ===================== CTA ===================== */}
         <section className="overflow-hidden rounded-md bg-brand-600">
-          <div className="flex flex-col items-center gap-6 px-6 py-16 text-center md:py-20">
-            <Reveal>
+          <div className="flex flex-col gap-6 px-6 py-16 md:items-center md:py-20 md:text-center">
+            <Reveal className="text-left md:text-center">
               <h2 className="text-2xl font-bold text-white md:text-3xl">
-                지반·구조물의 안전, CMPM에 문의하세요
+                지반·구조물의 안전<span className="hidden md:inline">, </span>
+                <br className="md:hidden" />
+                CMPM에 문의하세요
               </h2>
               <p className="mt-3 text-brand-100">
                 그라우팅 시공부터 유지보수까지, 기술로 답하는 토목 파트너.
               </p>
             </Reveal>
-            <Reveal i={1}>
+            <Reveal i={1} className="self-center">
               <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 font-semibold text-brand-700 transition-transform hover:scale-105"
