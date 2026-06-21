@@ -108,7 +108,7 @@ export default function Home() {
             <p className="eyebrow text-brand-500">Business</p>
             <h2 className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">사업분야</h2>
             <p className="mt-4 text-ink-soft">
-              그라우팅 시공을 핵심으로, 교량·상하수도 유지보수까지 토목 인프라의 안전을 폭넓게
+              그라우팅 시공을 핵심으로, 교량 유지보수·정밀 제어 굴착까지 토목 인프라의 안전을 폭넓게
               지원합니다.
             </p>
           </Reveal>
