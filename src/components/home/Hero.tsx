@@ -18,7 +18,7 @@ export function Hero() {
         className="-z-20 object-cover"
       />
       {/* 가독성 오버레이 — 왼쪽 진하게, 오른쪽으로 사진이 드러나게 */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-brand-900/75 via-brand-900/45 to-brand-900/10" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-brand-900/90 via-brand-900/65 to-brand-900/20" />
 
       <div className="flex min-h-[70vh] flex-col justify-center px-6 py-24 sm:px-10 md:min-h-[74vh] md:px-16 md:py-28">
         <motion.p
