@@ -1,4 +1,4 @@
-import { PageHero } from "@/components/site/PageHero";
+import { PageShell, block } from "@/components/site/PageShell";
 import { Reveal } from "@/components/ui/Reveal";
 import { BUSINESS } from "@/lib/site";
 
@@ -6,14 +6,13 @@ export const metadata = { title: "사업분야" };
 
 export default function BusinessPage() {
   return (
-    <>
-      <PageHero
-        eyebrow="Business"
-        title="사업분야"
-        description="그라우팅 시공을 핵심으로 교량·상하수도 유지보수까지, 토목 인프라의 안전을 지원합니다."
-      />
-      <section className="container-cmpm py-20 md:py-24">
-        <div className="space-y-12">
+    <PageShell
+      eyebrow="Business"
+      title="사업분야"
+      description="그라우팅 시공을 핵심으로 교량·상하수도 유지보수까지, 토목 인프라의 안전을 지원합니다."
+    >
+      <section className={block}>
+        <div className="space-y-12 md:space-y-16">
           {BUSINESS.map((b, i) => (
             <Reveal key={b.slug} i={i}>
               <div className="grid gap-8 md:grid-cols-2 md:items-center">
@@ -34,6 +33,6 @@ export default function BusinessPage() {
           ))}
         </div>
       </section>
-    </>
+    </PageShell>
   );
 }

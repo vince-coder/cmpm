@@ -1,4 +1,4 @@
-import { PageHero } from "@/components/site/PageHero";
+import { PageShell, block } from "@/components/site/PageShell";
 import { Reveal } from "@/components/ui/Reveal";
 import { COMPANY, HISTORY } from "@/lib/site";
 import { MapPin, Phone, Mail } from "lucide-react";
@@ -7,27 +7,23 @@ export const metadata = { title: "회사소개" };
 
 export default function AboutPage() {
   return (
-    <>
-      <PageHero
-        eyebrow="About"
-        title="회사소개"
-        description="그라우팅 특화·특허전문 토목기업 CMPM을 소개합니다."
-      />
-
+    <PageShell
+      eyebrow="About"
+      title="회사소개"
+      description="그라우팅 특화·특허전문 토목기업 CMPM을 소개합니다."
+    >
       {/* 연혁 */}
-      <section className="container-cmpm py-20 md:py-24">
+      <section className={block}>
         <Reveal>
           <p className="eyebrow text-brand-500">History</p>
-          <h2 className="mt-2 text-2xl font-bold tracking-tight md:text-3xl">
-            연혁
-          </h2>
+          <h2 className="mt-2 text-2xl font-bold tracking-tight md:text-3xl">연혁</h2>
           <p className="mt-3 text-ink-soft">
-            {COMPANY.established}년 설립 이래 그라우팅·토목 분야의 면허와
-            전문성을 차곡차곡 쌓아왔습니다.
+            {COMPANY.established}년 설립 이래 그라우팅·토목 분야의 면허와 전문성을 차곡차곡
+            쌓아왔습니다.
           </p>
         </Reveal>
 
-        <div className="mt-12 space-y-10">
+        <div className="mt-10 space-y-10">
           {HISTORY.map((group, gi) => (
             <Reveal key={group.year} i={gi}>
               <div className="grid gap-4 md:grid-cols-[120px_1fr]">
@@ -52,36 +48,32 @@ export default function AboutPage() {
       </section>
 
       {/* 오시는 길 */}
-      <section className="bg-surface-2 py-20 md:py-24">
-        <div className="container-cmpm">
-          <Reveal>
-            <p className="eyebrow text-brand-500">Location</p>
-            <h2 className="mt-2 text-2xl font-bold tracking-tight md:text-3xl">
-              오시는 길
-            </h2>
-          </Reveal>
+      <section className={block}>
+        <Reveal>
+          <p className="eyebrow text-brand-500">Location</p>
+          <h2 className="mt-2 text-2xl font-bold tracking-tight md:text-3xl">오시는 길</h2>
+        </Reveal>
 
-          <div className="mt-10 grid gap-8 md:grid-cols-[1fr_1.4fr]">
-            <div className="space-y-6">
-              <Info icon={<MapPin size={20} />} label="주소" value={COMPANY.address} />
-              <Info icon={<Phone size={20} />} label="전화" value={COMPANY.tel} />
-              <Info icon={<Mail size={20} />} label="이메일" value={COMPANY.email} />
-            </div>
-            <div className="overflow-hidden rounded-2xl border border-line">
-              <iframe
-                title="오시는 길"
-                src={`https://maps.google.com/maps?q=${encodeURIComponent(
-                  COMPANY.address
-                )}&hl=ko&z=16&output=embed`}
-                className="aspect-[16/10] w-full"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
+        <div className="mt-8 grid gap-8 md:grid-cols-[1fr_1.4fr]">
+          <div className="space-y-6">
+            <Info icon={<MapPin size={20} />} label="주소" value={COMPANY.address} />
+            <Info icon={<Phone size={20} />} label="전화" value={COMPANY.tel} />
+            <Info icon={<Mail size={20} />} label="이메일" value={COMPANY.email} />
+          </div>
+          <div className="overflow-hidden rounded-2xl ring-1 ring-line">
+            <iframe
+              title="오시는 길"
+              src={`https://maps.google.com/maps?q=${encodeURIComponent(
+                COMPANY.address
+              )}&hl=ko&z=16&output=embed`}
+              className="aspect-[16/10] w-full"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </div>
       </section>
-    </>
+    </PageShell>
   );
 }
 

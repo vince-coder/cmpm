@@ -1,4 +1,4 @@
-import { PageHero } from "@/components/site/PageHero";
+import { PageShell, block } from "@/components/site/PageShell";
 import { Reveal } from "@/components/ui/Reveal";
 import { ShieldCheck } from "lucide-react";
 import { TECHNOLOGIES } from "@/lib/site";
@@ -7,15 +7,13 @@ export const metadata = { title: "기술·특허" };
 
 export default function TechnologyPage() {
   return (
-    <>
-      <PageHero
-        eyebrow="Technology & Patents"
-        title="기술·특허"
-        description="차수·강관다단 그라우팅 공법과 20여 건의 보유 특허 — CMPM의 핵심 경쟁력입니다."
-      />
-
-      <section className="container-cmpm py-20 md:py-24">
-        <div className="space-y-16">
+    <PageShell
+      eyebrow="Technology & Patents"
+      title="기술·특허"
+      description="차수·강관다단 그라우팅 공법과 20여 건의 보유 특허 — CMPM의 핵심 경쟁력입니다."
+    >
+      <section className={block}>
+        <div className="space-y-12 md:space-y-16">
           {TECHNOLOGIES.map((t, i) => (
             <Reveal key={t.slug} i={i}>
               <div className="grid gap-8 md:grid-cols-2 md:items-center">
@@ -38,25 +36,23 @@ export default function TechnologyPage() {
         </div>
       </section>
 
-      <section className="bg-surface-2 py-20">
-        <div className="container-cmpm text-center">
-          <p className="eyebrow text-brand-500">Patents</p>
-          <h2 className="mt-2 text-3xl font-bold md:text-4xl">보유 특허 20+건</h2>
-          <p className="mx-auto mt-4 max-w-xl text-ink-soft">
-            특허 번호·명칭·등록일·특허증 이미지가 자료 수령 후 쇼케이스로 정리됩니다.
-          </p>
-          <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
-            {Array.from({ length: 10 }).map((_, i) => (
-              <div
-                key={i}
-                className="flex aspect-[3/4] items-center justify-center rounded-xl border border-dashed border-line bg-surface text-xs text-ink-soft"
-              >
-                특허 #{i + 1}
-              </div>
-            ))}
-          </div>
+      <section className={`${block} text-center`}>
+        <p className="eyebrow text-brand-500">Patents</p>
+        <h2 className="mt-2 text-3xl font-bold md:text-4xl">보유 특허 20+건</h2>
+        <p className="mx-auto mt-4 max-w-xl text-ink-soft">
+          특허 번호·명칭·등록일·특허증 이미지가 자료 수령 후 쇼케이스로 정리됩니다.
+        </p>
+        <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+          {Array.from({ length: 10 }).map((_, i) => (
+            <div
+              key={i}
+              className="flex aspect-[3/4] items-center justify-center rounded-xl border border-dashed border-line bg-surface-2 text-xs text-ink-soft"
+            >
+              특허 #{i + 1}
+            </div>
+          ))}
         </div>
       </section>
-    </>
+    </PageShell>
   );
 }

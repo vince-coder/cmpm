@@ -11,17 +11,17 @@
   --font-sans: var(--font-pretendard), var(--font-inter), system-ui, sans-serif;
   --font-display: var(--font-inter), var(--font-pretendard), sans-serif;
 
-  /* 브랜드 — 딥 블루 (단일 액센트) */
-  --color-brand-50: #eef3fb;
-  --color-brand-100: #d6e2f4;
-  --color-brand-200: #adc4e8;
-  --color-brand-300: #7ea1d8;
-  --color-brand-400: #4f7cc4;
-  --color-brand-500: #1e4f91; /* 메인 액센트 */
-  --color-brand-600: #1b3a6b; /* 진한 면/헤더 */
-  --color-brand-700: #152e54;
-  --color-brand-800: #102340;
-  --color-brand-900: #0b1830;
+  /* 브랜드 — 로열 블루 (로고 #1B48CF 기준, 단일 액센트) */
+  --color-brand-50: #eef2ff;
+  --color-brand-100: #dbe3ff;
+  --color-brand-200: #bccbff;
+  --color-brand-300: #93a8fd;
+  --color-brand-400: #647ff8;
+  --color-brand-500: #3a5cee; /* 밝은 액센트(링크·eyebrow·hero 텍스트) */
+  --color-brand-600: #1f47d0; /* 메인 솔리드(버튼·박스) = 로고 블루 */
+  --color-brand-700: #1b3aa8; /* 헤더 텍스트·호버 */
+  --color-brand-800: #1a3184;
+  --color-brand-900: #15235c; /* 어두운 면(헤더·푸터·히어로) */
 
   /* 뉴트럴 */
   --color-ink: #14181f;        /* 본문 텍스트 */
