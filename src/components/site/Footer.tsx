@@ -25,8 +25,8 @@ export function Footer() {
         {/* 바로가기 + 오시는 길 (제목 옆 가로 배치) */}
         <div className="space-y-6 text-sm">
           <nav className="flex flex-wrap items-baseline gap-x-5 gap-y-2">
-            <h3 className="font-semibold text-white">바로가기</h3>
-            <ul className="flex flex-wrap gap-x-4 gap-y-1">
+            <h3 className="w-full font-semibold text-white sm:w-auto">바로가기</h3>
+            <ul className="grid grid-cols-3 gap-x-4 gap-y-1 sm:flex sm:flex-wrap">
               {NAV.map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className="text-brand-200 hover:text-white">

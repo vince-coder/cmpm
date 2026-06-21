@@ -36,14 +36,14 @@ export default function Home() {
             {GLANCE.map((g, i) => (
               <Reveal key={g.label} i={i} className="h-full">
                 <div
-                  className="flex h-full flex-col rounded-sm px-3 py-7 text-center text-white sm:px-6 sm:py-8"
+                  className="flex aspect-square h-full flex-col justify-center rounded-sm px-3 py-4 text-center text-white sm:px-6"
                   style={{ backgroundColor: ACCENT_COLORS[i % ACCENT_COLORS.length] }}
                 >
                   <div className="font-display text-2xl font-bold sm:text-3xl md:text-4xl">
                     <CountUp to={g.value} suffix={g.suffix} raw={g.raw} />
                   </div>
                   <div className="mt-2 text-sm font-semibold">{g.label}</div>
-                  <div className="mt-1 whitespace-pre-line text-xs text-white/75">{g.note}</div>
+                  <div className="mt-1 min-h-[3em] whitespace-pre-line text-xs text-white/75">{g.note}</div>
                 </div>
               </Reveal>
             ))}
