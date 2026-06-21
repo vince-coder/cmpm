@@ -52,7 +52,7 @@ export default function Home() {
 
         {/* ===================== 핵심 기술·특허 ===================== */}
         <section className={block}>
-          <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-12">
             <Reveal>
               <p className="eyebrow text-brand-500">Technology &amp; Patents</p>
               <h2 className="mt-2 hidden text-2xl font-bold tracking-tight sm:block sm:text-3xl md:text-4xl">
@@ -160,7 +160,7 @@ export default function Home() {
           <Reveal className="flex flex-wrap items-end justify-between gap-4">
             <div>
               <p className="eyebrow text-brand-500">News</p>
-              <h2 className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">공지·소식</h2>
+              <h2 className="mt-2 hidden text-3xl font-bold tracking-tight md:block md:text-4xl">공지·소식</h2>
             </div>
             <Link
               href="/news"
@@ -173,11 +173,11 @@ export default function Home() {
           <ul className="mt-8 divide-y divide-line overflow-hidden rounded-sm bg-surface-2 ring-1 ring-line">
             {NEWS.map((n, i) => (
               <Reveal as="li" key={n.slug} i={i}>
-                <Link href="/news" className="flex items-center gap-4 px-6 py-5 transition-colors hover:bg-surface">
-                  <span className="rounded bg-brand-50 px-2.5 py-1 text-xs font-semibold text-brand-600">
+                <Link href="/news" className="flex items-center gap-3 px-4 py-5 transition-colors hover:bg-surface sm:gap-4 sm:px-6">
+                  <span className="shrink-0 rounded bg-brand-50 px-2 py-1 text-xs font-semibold text-brand-600 sm:px-2.5">
                     {n.category}
                   </span>
-                  <span className="flex-1 font-medium">{n.title}</span>
+                  <span className="flex-1 text-sm font-medium sm:text-base">{n.title}</span>
                   <span className="tabular hidden text-sm text-ink-soft sm:block">{n.date}</span>
                 </Link>
               </Reveal>
