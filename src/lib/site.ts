@@ -12,6 +12,9 @@ export const COMPANY = {
   domain: "www.cmpm-group.com",
 } as const;
 
+// 블록·아코디언 다양화용 액센트 (로열블루 톤 유지) — 순서대로 배정
+export const ACCENT_COLORS = ["#1f47d0", "#0d9488", "#4338ca", "#0369a1", "#7c3aed"];
+
 export type NavItem = { label: string; href: string };
 
 export const NAV: NavItem[] = [

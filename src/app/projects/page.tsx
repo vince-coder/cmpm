@@ -16,7 +16,7 @@ export default function ProjectsPage() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {PROJECTS.map((p, i) => (
             <Reveal key={p.slug} i={i % 3}>
-              <Link href="/projects" className="group block overflow-hidden rounded-2xl ring-1 ring-line">
+              <Link href="/projects" className="group block overflow-hidden rounded-lg ring-1 ring-line">
                 <div className="relative aspect-[4/3] bg-gradient-to-br from-brand-600 to-brand-800">
                   <span className="absolute left-4 top-4 rounded bg-white/15 px-2.5 py-1 text-xs font-medium text-white backdrop-blur">
                     {p.category}

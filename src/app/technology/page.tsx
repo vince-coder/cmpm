@@ -29,7 +29,7 @@ export default function TechnologyPage() {
                     ))}
                   </ul>
                 </div>
-                <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-brand-600 to-brand-800" />
+                <div className="aspect-[4/3] rounded-lg bg-gradient-to-br from-brand-600 to-brand-800" />
               </div>
             </Reveal>
           ))}

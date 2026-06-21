@@ -60,7 +60,7 @@ export default function AboutPage() {
             <Info icon={<Phone size={20} />} label="전화" value={COMPANY.tel} />
             <Info icon={<Mail size={20} />} label="이메일" value={COMPANY.email} />
           </div>
-          <div className="overflow-hidden rounded-2xl ring-1 ring-line">
+          <div className="overflow-hidden rounded-lg ring-1 ring-line">
             <iframe
               title="오시는 길"
               src={`https://maps.google.com/maps?q=${encodeURIComponent(
