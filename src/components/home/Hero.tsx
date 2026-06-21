@@ -48,7 +48,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.25 }}
-          className="mt-6 max-w-xl text-base text-brand-100 md:text-lg"
+          className="mt-6 hidden max-w-xl text-base text-brand-100 md:block md:text-lg"
         >
           차수·강관다단 그라우팅 전문기업 CMPM. 기술력을 공인받은 벤처기업으로,
           저수지·터널·교량·상하수도까지 검증된 기술로 인프라의 안전을 책임집니다.
@@ -68,17 +68,17 @@ export function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.45 }}
-          className="mt-4 flex flex-wrap gap-3"
+          className="mt-4 flex flex-nowrap gap-3"
         >
           <Link
             href="/technology"
-            className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-semibold text-brand-700 transition-transform hover:scale-105"
+            className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-white px-4 py-2.5 text-sm font-semibold text-brand-700 transition-transform hover:scale-105 sm:gap-2 sm:px-6 sm:py-3 sm:text-base"
           >
-            기술·특허 보기 <ArrowRight size={18} />
+            기술·특허 보기 <ArrowRight size={16} className="sm:size-[18px]" />
           </Link>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-full border border-white/30 px-6 py-3 font-semibold text-white transition-colors hover:bg-white/10"
+            className="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-white/30 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white/10 sm:px-6 sm:py-3 sm:text-base"
           >
             문의하기
           </Link>
