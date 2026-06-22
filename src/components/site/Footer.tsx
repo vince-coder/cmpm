@@ -16,17 +16,17 @@ export function Footer() {
               height={104}
               className="h-7 w-auto"
             />
-            <span className="font-display text-xl font-bold tracking-tight text-white">
-              씨엠피엠건설
+            <span className="font-display text-base font-bold tracking-tight text-white">
+              씨엠피엠건설(주)
             </span>
           </div>
         </div>
 
         {/* 바로가기 + 오시는 길 (제목 옆 가로 배치) */}
-        <div className="space-y-6 text-sm">
-          <nav className="flex flex-wrap items-baseline gap-x-5 gap-y-2">
-            <h3 className="w-full font-semibold text-white sm:w-auto">바로가기</h3>
-            <ul className="grid grid-cols-3 gap-x-4 gap-y-1 sm:flex sm:flex-wrap">
+        <div className="space-y-6 pl-2 text-sm sm:pl-0">
+          <nav className="flex flex-wrap items-baseline gap-x-3 gap-y-3 sm:gap-x-5">
+            <h3 className="w-16 shrink-0 font-semibold text-white sm:w-auto">바로가기</h3>
+            <ul className="grid grid-cols-3 gap-x-4 gap-y-1 text-xs sm:flex sm:flex-wrap sm:text-sm">
               {NAV.map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className="text-brand-200 hover:text-white">
@@ -37,12 +37,12 @@ export function Footer() {
             </ul>
           </nav>
 
-          <div className="flex flex-wrap items-baseline gap-x-5 gap-y-2">
-            <h3 className="whitespace-nowrap font-semibold text-white">오시는 길</h3>
-            <ul className="flex flex-wrap gap-x-4 gap-y-1 text-brand-200">
-              <li>{COMPANY.address}</li>
+          <div className="flex flex-wrap items-baseline gap-x-3 gap-y-3 sm:gap-x-5">
+            <h3 className="w-16 shrink-0 whitespace-nowrap font-semibold text-white sm:w-auto">오시는 길</h3>
+            <ul className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-brand-200 sm:text-sm">
+              <li className="basis-full sm:basis-auto">{COMPANY.address}</li>
               <li>T. {COMPANY.tel}</li>
-              <li className="basis-full md:basis-auto">E. {COMPANY.email}</li>
+              <li>E. {COMPANY.email}</li>
             </ul>
           </div>
         </div>
