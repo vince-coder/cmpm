@@ -54,7 +54,7 @@ export function Footer() {
           <div className="space-y-1">
             <p>씨엠피엠건설(주) · 대표 {COMPANY.ceo}</p>
             <p>사업자등록번호 {COMPANY.bizno}</p>
-            <p>업태 {COMPANY.bizType} · 종목 {COMPANY.bizItem}</p>
+            <p>업태: {COMPANY.bizType} · 종목: {COMPANY.bizItem}</p>
           </div>
           <div className="space-y-1 sm:text-right">
             <p>© {COMPANY.established}–{new Date().getFullYear()} {COMPANY.nameEn}. All rights reserved.</p>
