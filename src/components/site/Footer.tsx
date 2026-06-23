@@ -37,13 +37,13 @@ export function Footer() {
             </ul>
           </nav>
 
-          <div className="flex flex-wrap items-baseline gap-x-3 gap-y-3 sm:gap-x-5">
+          <div className="flex items-baseline gap-x-3 sm:gap-x-5">
             <h3 className="w-16 shrink-0 whitespace-nowrap font-semibold text-white sm:w-auto">오시는 길</h3>
-            <ul className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-brand-200 sm:text-sm">
+            <ul className="flex min-w-0 flex-1 flex-wrap gap-x-4 gap-y-1 text-xs text-brand-200 sm:flex-none sm:text-sm">
               <li className="basis-full sm:basis-auto">{COMPANY.address}</li>
               <li>T. {COMPANY.tel}</li>
               <li>F. {COMPANY.fax}</li>
-              <li className="basis-full">E. {COMPANY.email}</li>
+              <li className="basis-full sm:basis-auto">E. {COMPANY.email}</li>
             </ul>
           </div>
         </div>
