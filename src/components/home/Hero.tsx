@@ -50,8 +50,9 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.25 }}
           className="mt-6 hidden max-w-xl text-base text-brand-100 md:block md:text-lg"
         >
-          차수·강관다단 그라우팅 전문기업 CMPM. 기술력을 공인받은 벤처기업으로,
-          저수지·터널·교량·상하수도까지 검증된 기술로 인프라의 안전을 책임집니다.
+          씨엠피엠건설(주)(CMPM)은 차수·강관다단 그라우팅 전문기업입니다.
+          기술력을 공인받은 벤처기업으로, 저수지·터널·교량·상하수도까지
+          검증된 기술로 인프라의 안전을 책임집니다.
         </motion.p>
 
         <motion.div
