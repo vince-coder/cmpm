@@ -11,6 +11,7 @@ export const COMPANY = {
   tel: "062-381-9257",
   fax: "062-381-9258",
   email: "contact@cmpm-group.com",
+  bizno: "415-81-19506",
   domain: "www.cmpm-group.com",
 } as const;
 

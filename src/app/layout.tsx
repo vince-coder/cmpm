@@ -77,6 +77,7 @@ const orgJsonLd = {
   description:
     "씨엠피엠건설(CMPM)은 차수 그라우팅·강관다단 그라우팅에 특화된 특허전문 토목기업입니다. 저수지·터널·교량·상하수도 시공 및 유지보수를 수행합니다.",
   foundingDate: String(COMPANY.established),
+  taxID: COMPANY.bizno,
   telephone: "+82-62-381-9257",
   faxNumber: "+82-62-381-9258",
   email: COMPANY.email,
