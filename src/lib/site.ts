@@ -14,7 +14,7 @@ export const COMPANY = {
   bizno: "415-81-19506",
   ceo: "강민구",
   bizType: "건설, 신재생에너지", // 업태
-  bizItem: "보링그라우팅 외", // 종목
+  bizItem: "보링그라우팅공사 외", // 종목
   domain: "www.cmpm-group.com",
 } as const;
 
