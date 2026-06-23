@@ -52,7 +52,7 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="container-cmpm flex flex-col items-start justify-between gap-2 py-5 text-xs text-brand-300 sm:flex-row sm:items-center">
           <span>
-            씨엠피엠건설(주) · 대표 {COMPANY.ceo} · 사업자등록번호 {COMPANY.bizno}
+            씨엠피엠건설(주) · 대표 {COMPANY.ceo} · 사업자등록번호 {COMPANY.bizno} · 업태 {COMPANY.bizType} · 종목 {COMPANY.bizItem}
             <br className="sm:hidden" />
             <span className="hidden sm:inline"> · </span>© {COMPANY.established}–{new Date().getFullYear()} {COMPANY.nameEn}.
             All rights reserved.
