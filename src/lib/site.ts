@@ -9,6 +9,7 @@ export const COMPANY = {
   established: 2004,
   address: "광주광역시 서구 유림로98번길 43, 6층",
   tel: "062-381-9257",
+  fax: "062-381-9258",
   email: "contact@cmpm-group.com",
   domain: "www.cmpm-group.com",
 } as const;

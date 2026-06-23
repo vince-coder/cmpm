@@ -42,7 +42,8 @@ export function Footer() {
             <ul className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-brand-200 sm:text-sm">
               <li className="basis-full sm:basis-auto">{COMPANY.address}</li>
               <li>T. {COMPANY.tel}</li>
-              <li>E. {COMPANY.email}</li>
+              <li>F. {COMPANY.fax}</li>
+              <li className="basis-full">E. {COMPANY.email}</li>
             </ul>
           </div>
         </div>
